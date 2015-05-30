@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainweixin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#fff">  
+
+    <RelativeLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#BADF7F">                          
+         
+         <ImageView
+        	android:id="@+id/img_tab_now"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"        	     	
+        	android:scaleType="matrix"
+        	android:layout_gravity="bottom"            	
+            android:layout_alignParentBottom="true"
+        	android:src="#ff8800"
+        	android:contentDescription = "@string/bottom" />
+         
+         <LinearLayout
+            android:baselineAligned="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="2dp"            
+        	>
+        	
+            <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/img_weixin"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:clickable="true"
+        			android:src="@drawable/home2"
+        			android:contentDescription = "@string/home" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="@string/home"
+            		android:textColor="#666"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	 <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/img_address"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:clickable="true"
+        			android:src="@drawable/doc2"
+        			android:contentDescription = "@string/doc" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="@string/doc"
+            		android:textColor="#666"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	
+        	 <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/img_settings"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:clickable="true"
+        			android:src="@drawable/more2" 
+        			android:contentDescription = "@string/more"/>
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="@string/more"
+            		android:textColor="#666"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>        
+          
+        </LinearLayout>     
+       
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_alignParentTop="true"
+    	android:layout_above="@id/main_bottom"       
+        android:orientation="vertical" >
+        
+        <android.support.v4.view.ViewPager
+        	android:id="@+id/tabpager"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center" > 
+        </android.support.v4.view.ViewPager>  
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="match_parent"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true"
+       android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imghome"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12"
+                android:src="@drawable/schedule_home"
+                android:contentDescription = "@string/homeplace" />
+
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:background="#EEE">
+
+                    <ImageView
+                        android:id="@+id/imgtests"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/tests2"
+                        android:layout_weight="1"
+                        android:contentDescription = "@string/tests"/>
+
+                    <ImageView
+                        android:id="@+id/imgmanage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/manage2"
+                        android:layout_weight="1"
+                        android:contentDescription = "@string/manage" />
+                    
+                    <ImageView
+                        android:id="@+id/imgtips"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/tips2"
+                        android:layout_weight="1" 
+                        android:contentDescription = "@string/tipss"                        />
+            </LinearLayout>
+            <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:layout_marginBottom="55dp"
+                        android:background="#BEEADD" 
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                    
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="@string/days"
+                    android:textSize="25sp"
+                    android:textStyle="italic|bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="50sp"
+                    android:textStyle="italic|bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天！"
+                    android:textSize="25sp"
+                    android:textStyle="italic|bold" />
+                        
+           </LinearLayout>
+   </LinearLayout>
+    
+
+</RelativeLayout>
