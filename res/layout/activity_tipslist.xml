@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEE">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#BADF7F"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/title_btn_back"
+            android:onClick="register_back" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:contentDescription="返回"
+                android:src="@drawable/back" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="logo"
+                android:src="@drawable/icon2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="  饮食贴士 "
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="logo"
+            android:src="@drawable/home2" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+    <ImageView 
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:padding="2dp"
+        android:src="@drawable/iexample1"
+        android:contentDescription="物品图片"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+    <TextView
+        android:id="@+id/posttitle1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="#EBFABF"
+        android:gravity="left"
+        android:text="要吃鸡蛋！"
+        android:textColor="#4C4C4C"
+        android:textSize="20sp" />
+    <TextView 
+                    android:id="@+id/lblcontent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="要吃鸡蛋！要吃鸡蛋！要吃鸡蛋！要吃鸡蛋！要吃鸡蛋！……"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:background="#FFF"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />  
+   </LinearLayout> 
+   </LinearLayout>
+       <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+    <ImageView 
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:padding="2dp"
+        android:src="@drawable/iexample2"
+        android:contentDescription="物品图片"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+    <TextView
+        android:id="@+id/posttitle2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="#EBFABF"
+        android:gravity="left"
+        android:text="少吃甜食！"
+        android:textColor="#4C4C4C"
+        android:textSize="20sp" />
+    <TextView 
+                    android:id="@+id/lblcontent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="少吃甜食！少吃甜食！少吃甜食！少吃甜食！少吃甜食！……"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:background="#FFF"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />  
+   </LinearLayout> 
+   </LinearLayout>
+       <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+    <ImageView 
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:padding="2dp"
+        android:src="@drawable/iexample3"
+        android:contentDescription="物品图片"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+    <TextView
+        android:id="@+id/posttitle3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="#EBFABF"
+        android:gravity="left"
+        android:text="少喝冷饮！"
+        android:textColor="#4C4C4C"
+        android:textSize="20sp" />
+    <TextView 
+                    android:id="@+id/lblcontent3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="少喝冷饮！少喝冷饮！少喝冷饮！少喝冷饮！少喝冷饮！行……"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:background="#FFF"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />  
+   </LinearLayout> 
+   </LinearLayout>
+       <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+    <ImageView 
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:padding="2dp"
+        android:src="@drawable/iexample4"
+        android:contentDescription="物品图片"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+    <TextView
+        android:id="@+id/posttitle4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="#EBFABF"
+        android:gravity="left"
+        android:text="多吃水果！"
+        android:textColor="#4C4C4C"
+        android:textSize="20sp" />
+    <TextView 
+                    android:id="@+id/lblcontent4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="多吃水果！多吃水果！多吃水果！多吃水果！多吃水果！……"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:background="#FFF"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />  
+   </LinearLayout> 
+   </LinearLayout>
+       <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+    <ImageView 
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:padding="2dp"
+        android:src="@drawable/iexample5"
+        android:contentDescription="物品图片"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+    <TextView
+        android:id="@+id/posttitle5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="#EBFABF"
+        android:gravity="left"
+        android:text="别太重口！"
+        android:textColor="#4C4C4C"
+        android:textSize="20sp" />
+    <TextView 
+                    android:id="@+id/lblcontent5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="别太重口！别太重口！别太重口！别太重口！别太重口！……"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:background="#FFF"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />  
+   </LinearLayout> 
+   </LinearLayout>
+   </LinearLayout>   
+
