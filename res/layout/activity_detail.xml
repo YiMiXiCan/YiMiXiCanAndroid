@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg" >
+        android:background="#EBFABF">
         
     <RelativeLayout 
         android:id="@+id/rl_layout"
@@ -31,7 +31,7 @@
             <TextView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  注册  "
+                android:text="  个人信息"
                 android:textSize="18sp"
                 android:textColor="#000000"
                 android:layout_gravity="center_vertical"/>
@@ -64,7 +64,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/txt_style"
-                    android:hint="用户名"
+                    android:hint="昵称"
                     android:inputType="text"
                     android:paddingLeft="15dp"
                     android:textSize="12sp" />
@@ -83,6 +83,38 @@
                     android:paddingLeft="15dp"
                     android:prompt="@string/tips" />
             </TableRow>
+            
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <EditText
+                    android:id="@+id/txtregheight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/txt_style"
+                    android:hint="身高"
+                    android:inputType="numberSigned"
+                    android:paddingLeft="15dp"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp" >
+
+                <EditText
+                    android:id="@+id/txtregweight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/txt_style"
+                    android:hint="体重"
+                    android:inputType="numberSigned"
+                    android:paddingLeft="15dp"
+                    android:textSize="12sp" />
+            </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
@@ -94,11 +126,26 @@
                     android:layout_width="fill_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/txt_style"
-                    android:hint="输入密码"
+                    android:hint="原始密码"
                     android:inputType="textPassword"
                     android:paddingLeft="15dp"
                     android:textSize="12sp" />
             </TableRow>
+                        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp" >
+
+                <EditText
+                    android:id="@+id/txtregPassword1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/txt_style"
+                    android:hint="修改密码"
+                    android:inputType="textPassword"
+                    android:paddingLeft="15dp"
+                    android:textSize="12sp" />
+                </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
@@ -117,38 +164,27 @@
             </TableRow>
 
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" >
 
-                <CheckBox
-                    android:id="@+id/cbregAgree"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/agree"
-                    style="@style/CustomCheckboxTheme" />
-            </TableRow>
         </TableLayout>
 <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal" >
 
         
 
         <Button
-            android:id="@+id/btnReg"
+            android:id="@+id/btnLogin"
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:background="@drawable/btn_login_bg"
-            android:text="@string/bingo"
+            android:text="@string/save"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
-            style="@android:attr/buttonBarButtonStyle" />
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
     </LinearLayout>
 
