@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
@@ -22,6 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+      <activity android:name="com.nankai.yimixicanandroid.activity.RegisterActivity" android:label="注册" > </activity>
+      <activity android:name="com.nankai.yimixicanandroid.activity.Login" android:label="登陆"></activity>
+      <activity android:name="com.nankai.yimixicanandroid.activity.Welcome" android:label="欢迎页"></activity>
+      
     </application>
 
 </manifest>
