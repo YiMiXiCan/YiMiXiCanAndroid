@@ -20,6 +20,7 @@
     <string name="back">返回</string>
     <string name="logo">logo</string>
     <string name="tipstitle">————— 贴士分类 —————</string>
+    <string name="managetitle">————— 管理分类 —————</string>
     
 
 </resources>
