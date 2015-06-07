@@ -21,6 +21,7 @@
     <string name="logo">logo</string>
     <string name="tipstitle">————— 贴士分类 —————</string>
     <string name="managetitle">————— 管理分类 —————</string>
+    <string name="teststitle">————— 测试目录 —————</string>
     
 
 </resources>
