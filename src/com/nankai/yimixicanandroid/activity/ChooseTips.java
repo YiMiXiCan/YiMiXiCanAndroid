@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.nankai.yimixicanandroid.activity.R;
+import com.nankai.yimixicanandroid.R;
 public class ChooseTips extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -10,6 +10,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.nankai.yimixicanandroid.R;
 import com.nankai.yimixicanandroid.internet.WebAccessUtils;
 import com.nankai.yimixicanandroid.po.Tips;
 
