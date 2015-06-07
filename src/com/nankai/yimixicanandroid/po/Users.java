@@ -1,4 +1,5 @@
-package com.nankai.yimixican.po;
+package com.nankai.yimixicanandroid.po;
+
 
 import java.io.Serializable;
 
@@ -8,7 +9,7 @@ public class Users implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int uid;
+	private String uid;
 	private String username;
 	private String regtime;
 	private int gender;
@@ -25,7 +26,7 @@ public class Users implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Users(int uid, String username, String regtime, int gender, int age,
+	public Users(String uid, String username, String regtime, int gender, int age,
 			int rank, String remind, String password, float height,
 			float weight, String remindtime, String repassword,
 			String declaration) {
@@ -45,10 +46,10 @@ public class Users implements Serializable {
 		this.declaration = declaration;
 	}
 	
-	public int getUid() {
+	public String getUid() {
 		return uid;
 	}
-	public void setUid(int uid) {
+	public void setUid(String uid) {
 		this.uid = uid;
 	}
 	public String getUsername() {
