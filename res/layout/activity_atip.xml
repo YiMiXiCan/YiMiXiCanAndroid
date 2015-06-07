@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#BADF7F"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/title_btn_back"
+                android:onClick="register_back" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="返回"
+                    android:id="@+id/singleback"
+                    android:src="@drawable/back" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="logo"
+                    android:src="@drawable/icon2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="  贴士 "
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            
+
+            <ImageView
+                android:id="@+id/singletohome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:contentDescription="logo"
+                android:src="@drawable/home2" />
+        </RelativeLayout>
+        <TextView
+             android:id="@+id/tip_result"
+             android:layout_width="fill_parent"
+             android:layout_height="200dp"
+             android:layout_weight="0.95"
+             android:background="@drawable/txt_style"
+             android:editable="false"
+             android:ems="10"
+             android:gravity="top|left"
+             android:hint="转换结果"
+             android:padding="10dp"
+             android:layout_margin="10dp" />
+
+</LinearLayout>
