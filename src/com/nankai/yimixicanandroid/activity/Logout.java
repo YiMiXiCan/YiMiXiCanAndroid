@@ -1,8 +1,8 @@
 package com.nankai.yimixicanandroid.activity;
 
 
+import com.nankai.yimixicanandroid.R;
 
-import android.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +16,7 @@ public class Logout extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.activity_list_item);
+		this.setContentView(R.layout.activity_logout);
 		this.btnLogout = (Button) this.findViewById(R.id.btnLogout);
 		this.btnCannel = (Button) this.findViewById(R.id.btnCan);
 		// 设置监听器
@@ -37,9 +37,7 @@ public class Logout extends Activity {
 			case R.id.btnCan:
 				Intent intent = new Intent();
 				intent.setClass(Logout.this, Main.class);
-				startActivity(intent);
-				
-				
+				startActivity(intent);				
 		}
 		
 	}

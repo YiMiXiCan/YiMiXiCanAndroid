@@ -60,7 +60,7 @@
                 android:src="@drawable/home2" />
         </RelativeLayout>
  <ListView 
-      android:id="@+id/mnglist_item"
+      android:id="@+id/item"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"/>
 

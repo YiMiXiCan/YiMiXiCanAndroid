@@ -1,18 +1,20 @@
 package com.nankai.yimixicanandroid.activity;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import java.lang.reflect.Type;
+
+import org.apache.http.NameValuePair;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.nankai.yimixicanandroid.R;
 import com.nankai.yimixicanandroid.internet.WebAccessUtils;
 import com.nankai.yimixicanandroid.po.Habit;
+import com.nankai.yimixicanandroid.tools.MyAdapter;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -20,24 +22,20 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 public class ManageDiet extends Activity {
 	private List<Map<String, ?>> lstData;
 	private ListView lstMessages;
 	final int classID=1;//习惯类ID
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onCreate(android.os.Bundle)
-	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE); //设置全屏
 		this.setContentView(R.layout.activity_mnglist);
-		this.lstMessages = (ListView) this.findViewById(R.id.mnglist_item);
+		this.lstMessages = (ListView) this.findViewById(R.id.item);
 		this.lstData = fetchData();
-		SimpleAdapter adapter = new SimpleAdapter(this, this.lstData,
+		MyAdapter adapter = new MyAdapter(this, this.lstData,
 				R.layout.mnglist_item, new String[] { "imgPhoto",
 						"habit" }, new int[] {
 						R.id.itemimg, R.id.itemtext});
@@ -46,25 +44,18 @@ public class ManageDiet extends Activity {
 	}
 		private List<Map<String, ?>> fetchData() {
 			// TODO Auto-generated method stub
-			// 步骤4-1：创建一个空集合对象
+			Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-ddHH:mm:ss").create();
+			List<NameValuePair> lstNameValuePairs = new ArrayList<NameValuePair>();
+			String response = WebAccessUtils.httpRequest("DietHabitServlet", lstNameValuePairs);		
 			List<Map<String, ?>> lst = new ArrayList<Map<String, ?>>();
-			
-			// 步骤4-2：调用方法实现对网络服务的请求
-			String response = WebAccessUtils.httpRequest("DietHabitServlet");
-			
-			// 步骤4-3：设置一个全新的类型Type
 			Type ListMessages = new TypeToken<ArrayList<Habit>>() {
-			}.getType();
+			}.getType();	
 			
-			// 步骤4-4：创建并实例化一个Gson对象
-			Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss").create();
-			// 步骤4-5：解析JSon数据
 			List<Habit> lstVMessages = gson.fromJson(response, ListMessages);			
-			// 步骤4-6：使用循环遍历集合对象
 			for (Habit vMessage : lstVMessages) {
 				Map<String, Object> item = new HashMap<String, Object>();
 				item.put("habitid", vMessage.getHibitID());
-				item.put("imgPhoto", R.drawable.mng1);
+				item.put("imgPhoto",vMessage.getImgurl());
 				item.put("habit", vMessage.getName());
 				// 步骤4-7：将创建好的选项对象添加到集合中
 				lst.add(item);			
