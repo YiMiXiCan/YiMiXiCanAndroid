@@ -27,7 +27,7 @@ public class Welcome extends Activity {
 		//************************************		
 		super.onCreate(savedInstanceState);
 		 //设置全屏
-		 this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		// this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		 //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		 setContentView(R.layout.welcome);
 		 ImageView view =(ImageView) findViewById(R.id.imageView1);
@@ -53,7 +53,7 @@ public class Welcome extends Activity {
      * 跳转到登录界面
      */
     private void redirectTo(){       
-        Intent intent = new Intent(this,Login.class);
+        Intent intent = new Intent(this,Main.class);
         startActivity(intent);
         finish();
     }

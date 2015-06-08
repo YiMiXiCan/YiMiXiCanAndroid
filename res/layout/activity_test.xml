@@ -57,6 +57,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:contentDescription="logo"
+                android:clickable="true"
                 android:src="@drawable/home2" />
         </RelativeLayout>
                 <LinearLayout
@@ -80,18 +81,18 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
 
-                    <ImageView
-                        android:id="@+id/imgt1"
+                    <Button
+                        android:id="@+id/bnttest1"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:src="@drawable/test_1"
+                        android:background="@drawable/test_1"
                         android:layout_weight="1"/>
 
-                    <ImageView
-                        android:id="@+id/imgt2"
+                    <Button
+                        android:id="@+id/bnttest2"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:src="@drawable/test_2"
+                        android:background="@drawable/test_2"
                         android:layout_weight="1" />
             </LinearLayout>
             <LinearLayout 
@@ -101,18 +102,18 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
 
-                    <ImageView
-                        android:id="@+id/imgt3"
+                    <Button
+                        android:id="@+id/bnttest3"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:src="@drawable/test_3"
+                        android:background="@drawable/test_3"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:id="@+id/imgt4"
+                    <Button
+                        android:id="@+id/bnttest4"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:src="@drawable/test_4"
+                        android:background="@drawable/test_4"
                         android:layout_weight="1" />
             </LinearLayout>
             

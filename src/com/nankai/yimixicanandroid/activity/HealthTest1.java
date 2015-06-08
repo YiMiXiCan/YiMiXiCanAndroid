@@ -6,11 +6,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 
-public class ManageSchedule extends Activity {
+public class HealthTest1 extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE); //设置全屏
-		this.setContentView(R.layout.activity_mnglist);
+		this.setContentView(R.layout.activity_manage);
+		
 	}
 }

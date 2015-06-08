@@ -34,8 +34,8 @@ public class RegisterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.activity_register);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE); //设置全屏
+		this.setContentView(R.layout.activity_register);
 		
 		this.txtregAccount = (EditText) this.findViewById(R.id.txtregAccount);
 		this.txtregPassword = (EditText) this.findViewById(R.id.txtregPassword);

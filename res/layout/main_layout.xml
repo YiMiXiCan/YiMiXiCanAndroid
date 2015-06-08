@@ -163,27 +163,27 @@
                 android:orientation="horizontal"
                 android:background="#EEE">
 
-                    <ImageView
+                    <Button
                         android:id="@+id/imgtests"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/tests2"
+                        android:background="@drawable/tests2"
                         android:layout_weight="1"
                         android:contentDescription = "@string/tests"/>
 
-                    <ImageView
+                    <Button
                         android:id="@+id/imgmanage"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/manage2"
+                        android:background="@drawable/manage2"
                         android:layout_weight="1"
                         android:contentDescription = "@string/manage" />
                     
-                    <ImageView
+                    <Button
                         android:id="@+id/imgtips"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:src="@drawable/tips2"
+                        android:background="@drawable/tips2"
                         android:layout_weight="1" 
                         android:contentDescription = "@string/tipss"                        />
             </LinearLayout>

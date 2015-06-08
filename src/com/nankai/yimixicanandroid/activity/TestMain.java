@@ -1,6 +1,7 @@
 package com.nankai.yimixicanandroid.activity;
 
 import com.nankai.yimixicanandroid.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,25 +10,26 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class ManageMain extends Activity {
-	private Button bntdiet,bntsport,bntschedule;
+public class TestMain extends Activity {
+	private Button bnttest1,bnttest2,bnttest3,bnttest4;
 	private ImageView home;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE); //设置全屏
-		this.setContentView(R.layout.activity_manage);
-		
+		this.setContentView(R.layout.activity_test);
 		//实例化操作类组件
-		this.bntdiet = (Button) this.findViewById(R.id.bntdiet);
-		this.bntsport = (Button) this.findViewById(R.id.bntsport);
-		this.bntschedule = (Button) this.findViewById(R.id.bntschedule);
+		this.bnttest1 = (Button) this.findViewById(R.id.bnttest1);
+		this.bnttest2 = (Button) this.findViewById(R.id.bnttest2);
+		this.bnttest3 = (Button) this.findViewById(R.id.bnttest3);
+		this.bnttest4 = (Button) this.findViewById(R.id.bnttest4);
 		this.home = (ImageView) this.findViewById(R.id.imageView1);
 		//绑定监听器
-		this.bntdiet.setOnClickListener(new ViewOcl());	
-		this.bntsport.setOnClickListener(new ViewOcl());		
-		this.bntschedule.setOnClickListener(new ViewOcl());		
+		this.bnttest1.setOnClickListener(new ViewOcl());	
+		this.bnttest2.setOnClickListener(new ViewOcl());		
+		this.bnttest3.setOnClickListener(new ViewOcl());		
+		this.bnttest4.setOnClickListener(new ViewOcl());		
 		this.home.setOnClickListener(new ViewOcl());	
 	}
 	private class ViewOcl implements View.OnClickListener{
@@ -35,25 +37,30 @@ public class ManageMain extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
-			case R.id.bntdiet:
+			case R.id.bnttest1:
 				Intent intent1=new Intent();
-           	    intent1.setClass(ManageMain.this,ManageDiet.class );
+           	    intent1.setClass(TestMain.this,HealthTest1.class );
            	    startActivity(intent1); 
 				break;
-			case R.id.bntsport:
+			case R.id.bnttest2:
 				Intent intent2=new Intent();
-           	    intent2.setClass(ManageMain.this,ManageSport.class );
+           	    intent2.setClass(TestMain.this,HealthTest2.class );
            	    startActivity(intent2); 
 				break;
-			case R.id.bntschedule:
+			case R.id.bnttest3:
 				Intent intent3=new Intent();
-           	    intent3.setClass(ManageMain.this,ManageSchedule.class );
+           	    intent3.setClass(TestMain.this,HealthTest3.class );
            	    startActivity(intent3); 
 				break;
-			case R.id.imageView1:
+			case R.id.bnttest4:
 				Intent intent4=new Intent();
-           	    intent4.setClass(ManageMain.this,Main.class );
+           	    intent4.setClass(TestMain.this,HealthTest4.class );
            	    startActivity(intent4); 
+				break;	
+			case R.id.imageView1:
+				Intent intent5=new Intent();
+           	    intent5.setClass(TestMain.this,Main.class );
+           	    startActivity(intent5); 
 				break;
 		}
 	}

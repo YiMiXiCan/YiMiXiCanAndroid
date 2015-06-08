@@ -10,7 +10,7 @@ public class ManageSport extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.activity_manage);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE); //设置全屏
+		this.setContentView(R.layout.activity_mnglist);
 	}
 }

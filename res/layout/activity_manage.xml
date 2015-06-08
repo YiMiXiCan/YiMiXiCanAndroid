@@ -57,6 +57,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:contentDescription="logo"
+                android:clickable="true"
                 android:src="@drawable/home2" />
         </RelativeLayout>
         <LinearLayout
@@ -80,25 +81,25 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp">
 
-                    <ImageView
-                        android:id="@+id/imgdiet"
+                    <Button
+                        android:id="@+id/bntdiet"
                         android:layout_width="fill_parent"
                         android:layout_height="125dp"
-                        android:src="@drawable/mdiet"
+                        android:background="@drawable/mdiet"
                         android:layout_weight="1"/>
 
-                    <ImageView
-                        android:id="@+id/imgsport"
+                    <Button
+                        android:id="@+id/bntsport"
                         android:layout_width="fill_parent"
                         android:layout_height="125dp"
-                        android:src="@drawable/msport"
+                        android:background="@drawable/msport"
                         android:layout_weight="1" />
   
-                    <ImageView
-                        android:id="@+id/imgschedule"
+                    <Button
+                        android:id="@+id/bntschedule"
                         android:layout_width="fill_parent"
                         android:layout_height="125dp"
-                        android:src="@drawable/mschedule"
+                        android:background="@drawable/mschedule"
                         android:layout_weight="1" />
             </LinearLayout>
           
