@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#EEE">
+    
+    <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#BADF7F"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/title_btn_back"
+                android:onClick="register_back" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                android:contentDescription="@string/back"
+                    android:src="@drawable/back" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/icon2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="  运动管理"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_toLeftOf="@+id/imageView1"
+                android:layout_marginRight="5dp"
+                android:contentDescription="logo"
+                android:src="@drawable/search" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:contentDescription="logo"
+                android:src="@drawable/home2" />
+        </RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng16" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="仰卧起坐"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng16Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng17" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="平板支撑"
+        android:textSize="16sp" />
+</LinearLayout>
+ <CheckBox
+        android:id="@+id/mng17Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng18" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="球类运动"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng18Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng19"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="每天运动一小时"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng19Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng20"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="跑步"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng20Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng21" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="爬十层楼梯"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng21Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng22" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="饭后散步半小时"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng22Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng23" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="瘦身运动"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng23Agree"        
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng24" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="练腹肌"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng24Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="#FFF"
+    android:layout_marginBottom="0.5dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/mng25" 
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="游泳"
+        android:textSize="16sp" />
+</LinearLayout>
+<CheckBox
+        android:id="@+id/mng25Agree"
+        style="@style/MngCheckboxTheme"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" 
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>
+
+</LinearLayout>
