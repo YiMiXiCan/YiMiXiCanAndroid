@@ -5,61 +5,63 @@
     android:orientation="vertical"
     android:background="#EEE" >
 
-        <RelativeLayout
-            android:id="@+id/rl_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="45dp"
-            android:background="#BADF7F"
-            android:gravity="center_vertical" >
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#BADF7F"
+        android:gravity="center_vertical" >
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/title_btn_back"
+            android:onClick="register_back" >
+
+            <ImageView
+                android:id="@+id/tipback"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:background="@drawable/title_btn_back"
-                android:onClick="register_back" >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:contentDescription="返回"
-                    android:id="@+id/tipback"
-                    android:src="@drawable/back" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:contentDescription="logo"
-                    android:src="@drawable/icon2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="  贴士 "
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-            </LinearLayout>
+                android:contentDescription="返回"
+                android:src="@drawable/back" />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_alignTop="@+id/imageView1"
-                android:layout_toLeftOf="@+id/imageView1"
-                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
                 android:contentDescription="logo"
-                android:src="@drawable/search" />
+                android:src="@drawable/icon2" />
 
-            <ImageView
-                android:id="@+id/tiptohome"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="5dp"
-                android:contentDescription="logo"
-                android:src="@drawable/home2" />
-        </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="  贴士 "
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tiptohome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="logo"
+            android:src="@drawable/home2" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/tiptohome"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tiptohome"
+            android:contentDescription="logo"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

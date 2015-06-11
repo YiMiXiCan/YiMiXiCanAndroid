@@ -1,7 +1,6 @@
 package com.nankai.yimixicanandroid.activity;
 
 import com.nankai.yimixicanandroid.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +11,7 @@ import android.widget.ImageView;
 
 public class TestMain extends Activity {
 	private Button bnttest1,bnttest2,bnttest3,bnttest4;
-	private ImageView home;
+	private ImageView home,back;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -24,13 +23,15 @@ public class TestMain extends Activity {
 		this.bnttest2 = (Button) this.findViewById(R.id.bnttest2);
 		this.bnttest3 = (Button) this.findViewById(R.id.bnttest3);
 		this.bnttest4 = (Button) this.findViewById(R.id.bnttest4);
-		this.home = (ImageView) this.findViewById(R.id.imageView1);
+		this.home = (ImageView) this.findViewById(R.id.home);
+		this.back=(ImageView)this.findViewById(R.id.back);
 		//绑定监听器
 		this.bnttest1.setOnClickListener(new ViewOcl());	
 		this.bnttest2.setOnClickListener(new ViewOcl());		
 		this.bnttest3.setOnClickListener(new ViewOcl());		
 		this.bnttest4.setOnClickListener(new ViewOcl());		
 		this.home.setOnClickListener(new ViewOcl());	
+		this.back.setOnClickListener(new ViewOcl());
 	}
 	private class ViewOcl implements View.OnClickListener{
 		@Override
@@ -57,10 +58,15 @@ public class TestMain extends Activity {
            	    intent4.setClass(TestMain.this,HealthTest4.class );
            	    startActivity(intent4); 
 				break;	
-			case R.id.imageView1:
+			case R.id.home:
 				Intent intent5=new Intent();
            	    intent5.setClass(TestMain.this,Main.class );
            	    startActivity(intent5); 
+				break;
+			case R.id.back:
+				Intent intent6=new Intent();		
+				intent6.setClass(TestMain.this, Main.class);
+				startActivity(intent6);
 				break;
 		}
 	}

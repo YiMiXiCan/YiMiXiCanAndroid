@@ -30,7 +30,7 @@
         android:textSize="16sp" />
 </LinearLayout>
 <CheckBox
-        android:id="@+id/mng1Agree"
+        android:id="@+id/mngAgree"
         style="@style/MngCheckboxTheme"
         android:layout_width="34dp"
         android:layout_height="34dp"

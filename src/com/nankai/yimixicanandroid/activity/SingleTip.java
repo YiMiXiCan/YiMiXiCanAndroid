@@ -17,7 +17,6 @@ import com.nankai.yimixicanandroid.po.Tips;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -34,8 +33,6 @@ public class SingleTip extends Activity {
 		this.tipback=(ImageView)this.findViewById(R.id.singleback);
 		this.tiptohome=(ImageView)this.findViewById(R.id.singletohome);
 		this.tip_result=(TextView)this.findViewById(R.id.tip_result);
-		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
-		StrictMode.setThreadPolicy(policy);
 		findView();
 		this.tipback.setOnClickListener(new viewocl());
 		this.tiptohome.setOnClickListener(new viewocl());
@@ -69,7 +66,7 @@ public class SingleTip extends Activity {
 		   else{System.out.println("出错了");}
 	}
 	
-	private class viewocl implements View.OnClickListener{
+	public class viewocl implements View.OnClickListener{
 
 		@Override
 		public void onClick(View v) {
@@ -78,14 +75,14 @@ public class SingleTip extends Activity {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.singleback:
-				Toast.makeText(getApplicationContext(), "返回",Toast.LENGTH_LONG ).show();
+				//Toast.makeText(getApplicationContext(), "返回",Toast.LENGTH_LONG ).show();
 				
 				intent.setClass(SingleTip.this, ChooseTips.class);
 				startActivity(intent);
 				break;
 
 			case R.id.singletohome:
-				Toast.makeText(getApplicationContext(), "返回主页", Toast.LENGTH_LONG).show();
+				//Toast.makeText(getApplicationContext(), "返回主页", Toast.LENGTH_LONG).show();
 				
 				intent.setClass(SingleTip.this, Main.class);
 				startActivity(intent);

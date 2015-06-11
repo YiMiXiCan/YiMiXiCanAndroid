@@ -15,15 +15,19 @@ import com.nankai.yimixicanandroid.internet.WebAccessUtils;
 import com.nankai.yimixicanandroid.po.UserCard;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class ManageSchedule extends Activity {
 	CheckBox box9,box10,box11,box12,box13,box14;
+	private ImageView home,back;
 	final int classID=2;//习惯类ID
 	private int userID;
 	@Override
@@ -38,6 +42,10 @@ public class ManageSchedule extends Activity {
 		box12=(CheckBox)findViewById(R.id.mng12Agree);
 		box13=(CheckBox)findViewById(R.id.mng13Agree);
 		box14=(CheckBox)findViewById(R.id.mng14Agree);
+		this.home = (ImageView) this.findViewById(R.id.home);
+		this.back=(ImageView)this.findViewById(R.id.back);
+		this.home.setOnClickListener(new ViewOcl());	
+		this.back.setOnClickListener(new ViewOcl());
 		SharedPreferences preferences=getSharedPreferences("publicData", MODE_WORLD_READABLE);
 		this.userID=preferences.getInt("UID", 1);
 		box9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){ 
@@ -152,5 +160,22 @@ public class ManageSchedule extends Activity {
 			 Toast.makeText(getApplicationContext(), "习惯删除出了问题", Toast.LENGTH_LONG).show();
 		 }
 	}	
-	
+	private class ViewOcl implements View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.home:
+				Intent intent5=new Intent();
+           	    intent5.setClass(ManageSchedule.this,Main.class );
+           	    startActivity(intent5); 
+				break;
+			case R.id.back:
+				Intent intent6=new Intent();		
+				intent6.setClass(ManageSchedule.this, ManageMain.class);
+				startActivity(intent6);
+				break;
+			}			
+			}
+	}
 }

@@ -69,9 +69,9 @@ public class Main extends Activity {
            	    startActivity(intent2); 
 				break;
 			case R.id.imgtips:
-//				Intent intent3=new Intent();
-//           	    intent3.setClass(Main.this,ManageSchedule.class );
-//           	    startActivity(intent3); 
+				Intent intent3=new Intent();
+           	    intent3.setClass(Main.this,ChooseTips.class );
+           	    startActivity(intent3); 
 				break;
 			case R.id.img_weixin:
 				Intent intent4=new Intent();

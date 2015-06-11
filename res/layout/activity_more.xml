@@ -19,9 +19,11 @@
   			android:onClick="register_back">
             
             <ImageView 
+               android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:src="@drawable/back"
+                android:clickable="true"
                 android:contentDescription="@string/back"/>
             <ImageView 
                 android:layout_width="30dp"

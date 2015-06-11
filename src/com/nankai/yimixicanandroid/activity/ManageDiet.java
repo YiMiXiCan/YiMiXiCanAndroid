@@ -15,17 +15,21 @@ import com.nankai.yimixicanandroid.internet.WebAccessUtils;
 import com.nankai.yimixicanandroid.po.UserCard;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
 public class ManageDiet extends Activity{
 	CheckBox box1,box2,box3,box4,box5,box6,box7,box8,box26;
 	final int classID=1;//习惯类ID
+	private ImageView home,back;
 	private int userID;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +46,12 @@ public class ManageDiet extends Activity{
 		box7=(CheckBox)findViewById(R.id.mng7Agree);
 		box8=(CheckBox)findViewById(R.id.mng8Agree);
 		box26=(CheckBox)findViewById(R.id.mng26Agree);
+		this.home = (ImageView) this.findViewById(R.id.home);
+		this.back=(ImageView)this.findViewById(R.id.back);
 		SharedPreferences preferences=getSharedPreferences("publicData", MODE_WORLD_READABLE);
 		this.userID=preferences.getInt("UID", 1);
-		
+		this.home.setOnClickListener(new ViewOcl());	
+		this.back.setOnClickListener(new ViewOcl());
 		box1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){ 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, 
@@ -192,4 +199,23 @@ public class ManageDiet extends Activity{
 			 Toast.makeText(getApplicationContext(), "习惯删除出了问题", Toast.LENGTH_LONG).show();
 		 }
 	}	
+	
+	private class ViewOcl implements View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.home:
+				Intent intent5=new Intent();
+           	    intent5.setClass(ManageDiet.this,Main.class );
+           	    startActivity(intent5); 
+				break;
+			case R.id.back:
+				Intent intent6=new Intent();		
+				intent6.setClass(ManageDiet.this, ManageMain.class);
+				startActivity(intent6);
+				break;
+			}			
+			}
+	}
 }

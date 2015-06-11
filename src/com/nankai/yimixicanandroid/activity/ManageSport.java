@@ -8,10 +8,13 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -25,6 +28,7 @@ import android.widget.CompoundButton;
 
 public class ManageSport extends Activity {
 	CheckBox box16,box17,box18,box19,box20,box21,box22,box23,box24,box25;
+	private ImageView home,back;
 	final int classID=3;//习惯类ID
 	private int userID;
 	@Override
@@ -43,6 +47,10 @@ public class ManageSport extends Activity {
 		box23=(CheckBox)findViewById(R.id.mng23Agree);
 		box24=(CheckBox)findViewById(R.id.mng24Agree);
 		box25=(CheckBox)findViewById(R.id.mng25Agree);
+		this.home = (ImageView) this.findViewById(R.id.home);
+		this.back=(ImageView)this.findViewById(R.id.back);
+		this.home.setOnClickListener(new ViewOcl());	
+		this.back.setOnClickListener(new ViewOcl());
 		SharedPreferences preferences=getSharedPreferences("publicData", MODE_WORLD_READABLE);
 		this.userID=preferences.getInt("UID", 1);
 	box16.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){ 
@@ -206,5 +214,23 @@ public class ManageSport extends Activity {
 			 Toast.makeText(getApplicationContext(), "习惯删除出了问题", Toast.LENGTH_LONG).show();
 		 }
 	}	
+	private class ViewOcl implements View.OnClickListener{
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.home:
+				Intent intent5=new Intent();
+           	    intent5.setClass(ManageSport.this,Main.class );
+           	    startActivity(intent5); 
+				break;
+			case R.id.back:
+				Intent intent6=new Intent();		
+				intent6.setClass(ManageSport.this, ManageMain.class);
+				startActivity(intent6);
+				break;
+			}			
+			}
+	}
 }
 
