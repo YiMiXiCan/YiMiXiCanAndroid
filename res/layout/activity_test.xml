@@ -19,10 +19,8 @@
                 android:onClick="register_back" >
 
                 <ImageView
-                    android:id="@+id/back"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:clickable="true"
                 android:contentDescription="@string/back"
                     android:src="@drawable/back" />
 
@@ -43,25 +41,14 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/home"
+                android:id="@+id/imageView1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:contentDescription="logo"
-                android:clickable="true"
                 android:src="@drawable/home2" />
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignTop="@+id/home"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@+id/home"
-                android:contentDescription="logo"
-                android:src="@drawable/search" />
-
         </RelativeLayout>
                 <LinearLayout
                 android:layout_width="match_parent"
@@ -84,18 +71,18 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
 
-                    <Button
-                        android:id="@+id/bnttest1"
+                    <ImageView
+                        android:id="@+id/imgt1"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:background="@drawable/test_1"
+                        android:src="@drawable/test_1"
                         android:layout_weight="1"/>
 
-                    <Button
-                        android:id="@+id/bnttest2"
+                    <ImageView
+                        android:id="@+id/imgt2"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:background="@drawable/test_2"
+                        android:src="@drawable/test_2"
                         android:layout_weight="1" />
             </LinearLayout>
             <LinearLayout 
@@ -105,18 +92,18 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
 
-                    <Button
-                        android:id="@+id/bnttest3"
+                    <ImageView
+                        android:id="@+id/imgt3"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:background="@drawable/test_3"
+                        android:src="@drawable/test_3"
                         android:layout_weight="1" />
 
-                    <Button
-                        android:id="@+id/bnttest4"
+                    <ImageView
+                        android:id="@+id/imgt4"
                         android:layout_width="fill_parent"
                         android:layout_height="150dp"
-                        android:background="@drawable/test_4"
+                        android:src="@drawable/test_4"
                         android:layout_weight="1" />
             </LinearLayout>
             

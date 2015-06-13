@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-        android:background="#EBFABF">
+        android:background="#F2EDD9">
         
-<RelativeLayout
+    <RelativeLayout
             android:id="@+id/rl_layout"
             android:layout_width="fill_parent"
             android:layout_height="45dp"
@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="  个人信息"
+                    android:text="  测试"
                     android:textColor="#000000"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -67,34 +67,29 @@
             android:paddingTop="20dp"
             android:stretchColumns="0" >
 
+                        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView 
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:textSize="20sp"
+                    android:text="测试标题"
+                    android:layout_gravity="center"/>
+            </TableRow>
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/txtregAccount"
+                <TextView 
                     android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/txt_style"
-                    android:hint="昵称"
-                    android:inputType="text"
-                    android:paddingLeft="15dp"
-                    android:textSize="12sp" />
+                    android:layout_height="80dp"
+                    android:textSize="18sp"
+                    android:text="关于这个测试的介绍啥的。。。"/>
             </TableRow>
 
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
 
-                <Spinner
-                    android:id="@+id/spSex"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/txt_style"
-                    android:entries="@array/sex"
-                    android:paddingLeft="15dp"
-                    android:prompt="@string/tips" />
-            </TableRow>
             
             <TableRow
                 android:layout_width="fill_parent"
@@ -112,21 +107,7 @@
                     android:textSize="12sp" />
             </TableRow>
 
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp" >
 
-                <EditText
-                    android:id="@+id/txtregweight"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/txt_style"
-                    android:hint="体重"
-                    android:inputType="numberSigned"
-                    android:paddingLeft="15dp"
-                    android:textSize="12sp" />
-            </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
@@ -139,37 +120,6 @@
                     android:layout_height="40dp"
                     android:background="@drawable/txt_style"
                     android:hint="原始密码"
-                    android:inputType="textPassword"
-                    android:paddingLeft="15dp"
-                    android:textSize="12sp" />
-            </TableRow>
-                        <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp" >
-
-                <EditText
-                    android:id="@+id/txtregPassword1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/txt_style"
-                    android:hint="修改密码"
-                    android:inputType="textPassword"
-                    android:paddingLeft="15dp"
-                    android:textSize="12sp" />
-                </TableRow>
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp" >
-
-                <EditText
-                    android:id="@+id/txtregPassword2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/txt_style"
-                    android:hint="确认密码"
                     android:inputType="textPassword"
                     android:paddingLeft="15dp"
                     android:textSize="12sp" />
@@ -187,13 +137,12 @@
         
 
         <Button
-            android:id="@+id/btnLogin"
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:background="@drawable/btn_login_bg"
-            android:text="@string/save"
+            android:text="开始测试"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             style="?android:attr/buttonBarButtonStyle" />
