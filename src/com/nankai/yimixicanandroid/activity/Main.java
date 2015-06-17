@@ -60,7 +60,7 @@ public class Main extends Activity {
 			switch (v.getId()) {
 			case R.id.imgtests:
 				Intent intent1=new Intent();
-           	    intent1.setClass(Main.this,TestMain.class );
+           	    intent1.setClass(Main.this,HealthTestMain.class );
            	    startActivity(intent1); 
 				break;
 			case R.id.imgmanage:
