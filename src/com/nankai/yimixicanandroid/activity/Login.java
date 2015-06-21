@@ -74,10 +74,13 @@ public class Login extends Activity {
 				Users u = null;
 				u = gson.fromJson(response, Users.class);				
 				if(u != null){					
-					Intent intent = new Intent();
-					intent.putExtra("user", u.getUid());
-					intent.setClass(Login.this, Main.class);
-					startActivity(intent);
+					SharedPreferences.Editor editor=getSharedPreferences("publicData",MODE_WORLD_WRITEABLE).edit();
+               	    editor.putInt("UID", u.getUid());
+               	    editor.commit();               	    
+					Toast.makeText(getApplicationContext(), "欢迎登录逗逗乐", Toast.LENGTH_LONG).show();
+					Intent intent2 = new Intent();
+					intent2.setClass(Login.this, Main.class);
+					startActivity(intent2);
 				}else{
 					Toast.makeText(getApplicationContext(), "用户名和密码不匹配", Toast.LENGTH_LONG).show();
 					}	

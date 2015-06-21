@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package com.nankai.yimixicanandroid.po;
-=======
-package com.nankai.yimixican.po;
->>>>>>> parent of ce92174... 退出登录界面+登陆实现+退出登录验证实现
 
 import java.io.Serializable;
 

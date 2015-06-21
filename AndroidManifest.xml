@@ -39,7 +39,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.nankai.yimixicanandroid.activity.ManageSchedule"
+            android:name="com.nankai.yimixicanandroid.activity.MyCard"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -74,7 +74,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.nankai.yimixicanandroid.activity.TestMain"
+            android:name="com.nankai.yimixicanandroid.activity.HealthTestMain"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -96,7 +96,11 @@
         <activity
             android:name="com.nankai.yimixicanandroid.activity.Logout"
             android:label="@string/app_name" >
-        </activity>       
+        </activity>          
+         <activity
+            android:name="com.nankai.yimixicanandroid.activity.ManageSchedule"
+            android:label="@string/app_name" >
+        </activity>   
     </application>
 
 </manifest>

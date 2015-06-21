@@ -20,8 +20,9 @@
                 <ImageView
                     android:id="@+id/back"
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                android:contentDescription="@string/back"
+                    android:layout_height="fill_parent" 
+                    android:contentDescription="@string/back"
+                    android:clickable="true"
                     android:src="@drawable/back" />
 
                 <ImageView
@@ -40,8 +41,6 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-
-
             <ImageView
                 android:id="@+id/home"
                 android:layout_width="30dp"
@@ -50,6 +49,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
                 android:contentDescription="logo"
+                android:clickable="true"
                 android:src="@drawable/home2" />
         </RelativeLayout>
 

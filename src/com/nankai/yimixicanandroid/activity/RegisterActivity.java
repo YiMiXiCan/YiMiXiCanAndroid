@@ -1,7 +1,9 @@
 package com.nankai.yimixicanandroid.activity;
 
 import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
@@ -14,6 +16,7 @@ import com.nankai.yimixicanandroid.R;
 import com.nankai.yimixicanandroid.internet.WebAccessUtils;
 import com.nankai.yimixicanandroid.po.Users;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -51,19 +54,24 @@ public class RegisterActivity extends Activity {
 	}
 	
 	private class ViewOcl implements View.OnClickListener{
+		@SuppressLint("SimpleDateFormat")
 		public void onClick(View v) {
 			if(R.id.btnReg==v.getId())
 			{
 				  boolean flag=checkForm();
 	                 if(flag){
 	                	 Users user=new Users();
-	                	 String iden,repassword,password;
+	                	 String iden,repassword,password,regtime;
 	                	 iden=txtregAccount.getText().toString().trim();
 	                	 repassword=txtregPassword2.getText().toString().trim();
 	                	 password=txtregPassword.getText().toString().trim();	       
 	                	 user.setUsername(iden);
 	                	 user.setRepassword(repassword);
 	                	 user.setPassword(password);
+	                	 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	             		Date nowtime = new Date();
+	             		regtime = sdf.format(nowtime);
+	             		user.setRegtime(regtime);
 	 	 				Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-ddhh:mm:ss").create();
 	 	 				String user_data = gson.toJson(user);
 	 	 				List<NameValuePair> lstNameValuePairs = new ArrayList<NameValuePair>();

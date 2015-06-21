@@ -30,6 +30,8 @@
     <style name="MngCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">  
         <item name="android:button">@drawable/mng_checkbox_style</item>  
     </style> 
-    
+    <style name="MngCheckboxTheme1" parent="@android:style/Widget.CompoundButton.CheckBox">  
+        <item name="android:button">@drawable/mng_checkbox_style1</item>  
+    </style>
 
 </resources>

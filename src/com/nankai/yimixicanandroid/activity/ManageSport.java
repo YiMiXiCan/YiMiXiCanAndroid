@@ -190,7 +190,7 @@ public class ManageSport extends Activity {
 			 Toast.makeText(getApplicationContext(), "习惯添加成功，赞一个！", Toast.LENGTH_LONG).show();
 		 }
 		 else{
-			 Toast.makeText(getApplicationContext(), "习惯添加出问题了，抱歉~", Toast.LENGTH_LONG).show();
+			 Toast.makeText(getApplicationContext(), "习惯添加出问题了，很可能是你已添加了此习惯", Toast.LENGTH_LONG).show();
 		 }
 		
 	}

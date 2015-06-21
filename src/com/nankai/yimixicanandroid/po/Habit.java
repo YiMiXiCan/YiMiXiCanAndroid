@@ -1,4 +1,4 @@
-package com.nankai.yimixican.po;
+package com.nankai.yimixicanandroid.po;
 
 /**
  * 文件名：Habit.java

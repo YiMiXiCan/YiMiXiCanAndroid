@@ -53,7 +53,7 @@ public class Welcome extends Activity {
      * 跳转到登录界面
      */
     private void redirectTo(){       
-        Intent intent = new Intent(this,Main.class);
+        Intent intent = new Intent(this,Login.class);
         startActivity(intent);
         finish();
     }

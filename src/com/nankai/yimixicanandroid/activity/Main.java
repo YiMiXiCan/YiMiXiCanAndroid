@@ -1,5 +1,8 @@
 package com.nankai.yimixicanandroid.activity;
-
+/**
+ * 首界面
+ * 可实现图片的手动轮滑及各类的索引
+ * */
 import com.nankai.yimixicanandroid.R;
 import com.nankai.yimixicanandroid.tools.ChildViewPager;
 import com.nankai.yimixicanandroid.tools.ImgaePagerAdapter;
@@ -7,15 +10,18 @@ import com.nankai.yimixicanandroid.tools.ImgaePagerAdapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Main extends Activity {
 	private Button bnttest,bntmanage,bnttips;
 	private ImageView bnthome,bntset,bntshare;
+	private long exitTime = 0;
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
@@ -84,9 +90,9 @@ public class Main extends Activity {
            	    startActivity(intent5); 
 				break;
 			case R.id.img_address:
-//				Intent intent6=new Intent();
-//           	    intent6.setClass(Main.this,ManageSchedule.class );
-//           	    startActivity(intent6); 
+				Intent intent6=new Intent();
+           	    intent6.setClass(Main.this,MyCard.class );
+           	    startActivity(intent6); 
 				break;
 				default:
 				break;			
@@ -97,7 +103,6 @@ public class Main extends Activity {
 	/**
 	 * 设置轮转播放图片
 	*/
-	@SuppressWarnings("unused")
 	private void setViewPageImage() {
 		group = (ViewGroup)this.findViewById(R.id.viewGroup);
 		viewPager = (ChildViewPager) this.findViewById(R.id.viewPager);
@@ -112,4 +117,26 @@ public class Main extends Activity {
 		viewPager.setAdapter(new ImgaePagerAdapter(mImageViews));
 		//viewPager.setOnPageChangeListener((OnPageChangeListener) this);
 	} 
+	//双击手机返回键，退出应用
+	public boolean onCreateOptionsMenu(Menu menu) {
+		return true;
+	}
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) { 
+		if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){ 
+		if((System.currentTimeMillis()-exitTime) > 2000){ 
+		Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show(); 
+		exitTime = System.currentTimeMillis(); 
+		} else { 
+			 Intent intent = new Intent(Intent.ACTION_MAIN);  
+             intent.addCategory(Intent.CATEGORY_HOME);  
+             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  
+             startActivity(intent);  
+         android.os.Process.killProcess(android.os.Process.myPid());
+		} 
+		return true; 
+		} 
+		return super.onKeyDown(keyCode, event); 
+		} 	
+
 }

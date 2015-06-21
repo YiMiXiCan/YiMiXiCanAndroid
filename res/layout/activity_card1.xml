@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+            <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#BADF7F"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/title_btn_back"
+                android:onClick="register_back" >
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/back"
+                    android:clickable="true"
+                    android:src="@drawable/back" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/logo"
+                    android:src="@drawable/icon2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="  今日打卡"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:contentDescription="logo"
+                android:clickable="true"
+                android:src="@drawable/home2" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/imageView1"
+                android:contentDescription="share"
+                android:clickable="true"
+                android:src="@drawable/share" />
+
+        </RelativeLayout>       
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/card_bg3">
+            
+            <LinearLayout 
+                            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            
+ <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="15dp">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng10"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="早起"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+
+ <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+      >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng9"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="早睡"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+
+  <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+      >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng1"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="按时吃饭"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+ 
+  
+   <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+      >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng3"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="拒绝零食"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+  
+   
+    <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+      >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng20"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="跑步"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+
+            <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+      >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng2"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="多喝水"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+   
+
+     <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+      >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng26"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="多吃蔬菜少吃肉"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+
+         <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+      >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/mng16"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="26dp"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="仰卧起坐"
+        android:textSize="20sp" />
+</LinearLayout>
+    <GifView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/tickv" />
+</RelativeLayout>
+
+         </LinearLayout>
+
+ <Button
+     android:id="@+id/btnLogin"
+     style="android:attr/buttonBarButtonStyle"
+     android:layout_width="fill_parent"
+     android:layout_height="35dp"
+     android:layout_margin="20dp"
+     android:layout_alignParentBottom="true"
+     android:layout_centerHorizontal="true"
+     android:background="@drawable/btn_login_bg"
+     android:text="@string/save"
+     android:textColor="#FFFFFF"
+     android:textSize="15sp" />
+
+        </RelativeLayout>
+    
+
+</LinearLayout>

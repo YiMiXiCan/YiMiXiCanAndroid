@@ -22,22 +22,22 @@ public class CalculateHealth {
 		double BMINumber=bmi.getBMINumber();
 		if(BMINumber<18.5)
 		{
-			bmi.setBMIInformation("亲，你偏瘦了");
+			bmi.setBMIInformation("偏瘦了");
 			bmi.setDisease("低（其它疾病危险性增加）");
 		}
 		else if(BMINumber>=18.5&&BMINumber<24)
 		{
-			bmi.setBMIInformation("亲，你的体型真是太让人羡慕了！");
+			bmi.setBMIInformation("这身材真是太让人羡慕了！");
 			bmi.setDisease("平均水平");
 		}
 		else if(BMINumber>=24&&BMINumber<28)
 		{
-			bmi.setBMIInformation("亲，你有点偏胖喔~");
+			bmi.setBMIInformation("有点偏胖喔~");
 			bmi.setDisease("增加");
 		}
 		else if(BMINumber>=28)
 		{
-			bmi.setBMIInformation("啊，亲，你太胖了，快与我减肥去~");
+			bmi.setBMIInformation("啊，太胖了，快与我减肥去吧~");
 			bmi.setDisease("严重增加");
 		}			
 		return bmi;
@@ -47,13 +47,13 @@ public class CalculateHealth {
 	public FemaleBody bestfemale(double height)//单位：cm
 	{
 		FemaleBody body=new FemaleBody();
-		body.setArm(height*0.15);
-		body.setBust(height*0.53);
-		body.setWaistmax(height*0.43);
-		body.setHips(height*0.54);
-		body.setLowerLeg(height*0.21);
-		body.setThigh(height*0.26+7.8);
-		body.setWaistmin(height*0.37);
+		body.setArm(height*0.15*0.3937);
+		body.setBust(height*0.53*0.3937);
+		body.setWaistmax(height*0.43*0.3937);
+		body.setHips(height*0.54*0.3937);
+		body.setLowerLeg(height*0.21*0.3937);
+		body.setThigh(height*0.26+7.8*0.3937);
+		body.setWaistmin(height*0.37*0.3937);
 		return body;
 	}
 
